@@ -1,0 +1,22 @@
+{
+  "sapaan": {
+    "reply": "Halo! Ada yang bisa saya bantu?",
+    "prompts": ["Siapa kamu?", "Apa yang bisa kamu lakukan?", "Berita hari ini apa?"]
+  },
+  "bot": {
+    "reply": "Saya adalah chatbot yang dibuat dengan Natural.js!",
+    "prompts": ["Apa itu Natural.js?", "Bagaimana cara kerjamu?", "Siapa yang membuatmu?"]
+  },
+  "fitur": {
+    "reply": "Saya bisa menjawab pertanyaan sederhana.",
+    "prompts": ["Bisa kasih rekomendasi?", "Bisa hitung angka?", "Apa tugas chatbot?"]
+  },
+  "harga": {
+    "reply": "Maaf, saya tidak tahu harga produk.",
+    "prompts": ["Dimana saya bisa cek harga?", "Bisa bandingkan harga?", "Ada diskon?"]
+  },
+  "creator": {
+    "reply": "Pembuatku adalah ferry ganteng",
+    "prompts": ["Hai", "Apa yang bisa kamu lakukan?", "Siapa kamu?"]
+  }
+}
