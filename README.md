@@ -8,6 +8,12 @@ Chatbot sederhana berbasis **Node.js** dan **Natural.js** yang mampu memahami te
 - Data training dan respons chatbot disimpan dalam file JSON
 - API sederhana berbasis **Express.js**
 
+## 🛠️ Teknologi
+
+- **Node.js** – JavaScript runtime > v18
+- **Express.js** – Web framework
+- **Natural.js** – Natural language processing toolkit
+
 ## 📌 Instalasi
 
 Pastikan Anda telah menginstal **Node.js** di sistem Anda.
@@ -47,7 +53,11 @@ Tambahkan file berikut:
 ## 🚀 Menjalankan API
 
 ```sh
-npm start
+# Run in production mode
+pnpm start
+
+# Run in development mode
+pnpm dev
 ```
 
 API akan berjalan di `http://localhost:3000`
