@@ -20,7 +20,7 @@ COPY . .
 ENV NODE_ENV=production
 
 # Expose port aplikasi
-EXPOSE 3000
+EXPOSE 3030
 
 # Gunakan perintah start untuk menjalankan aplikasi
 CMD ["pnpm", "start"]
