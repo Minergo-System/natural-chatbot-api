@@ -1,22 +1,102 @@
 {
   "sapaan": {
-    "reply": "Halo! Ada yang bisa saya bantu?",
-    "prompts": ["Siapa kamu?", "Apa yang bisa kamu lakukan?", "Berita hari ini apa?"]
+    "reply": "Hai, Namaku adalah Mia",
+    "prompts": ["Bagaimana sejarah perusahaan ini?", "Apa layanan utama perusahaan?"]
   },
-  "bot": {
-    "reply": "Saya adalah chatbot yang dibuat dengan Natural.js!",
-    "prompts": ["Apa itu Natural.js?", "Bagaimana cara kerjamu?", "Siapa yang membuatmu?"]
+  "profil": {
+    "reply": "Perusahaan kami adalah PT Minergo Visi Maxima, bergerak di bidang Teknologi Pertambangan. Kami mengembangkan solusi berbasis AI & IoT untuk meningkatkan efisiensi dan keselamatan dalam industri tambang.",
+    "prompts": ["Apa visi dan misinya?", "Bagaimana sejarah perusahaan ini?", "Apa layanan utama perusahaan?"]
   },
-  "fitur": {
-    "reply": "Saya bisa menjawab pertanyaan sederhana.",
-    "prompts": ["Bisa kasih rekomendasi?", "Bisa hitung angka?", "Apa tugas chatbot?"]
+  "visi_misi": {
+    "reply": "Visi kami adalah menjadi pemimpin dalam inovasi teknologi pertambangan berkelanjutan. Misi kami adalah mengembangkan solusi berbasis AI & IoT, meningkatkan efisiensi, serta mendukung pertambangan yang lebih aman dan ramah lingkungan.",
+    "prompts": ["Bagaimana cara kerja solusi AI di perusahaan ini?", "Apa manfaat teknologi pertambangan?"]
   },
-  "harga": {
-    "reply": "Maaf, saya tidak tahu harga produk.",
-    "prompts": ["Dimana saya bisa cek harga?", "Bisa bandingkan harga?", "Ada diskon?"]
+  "sejarah": {
+    "reply": "PT Minergo Visi Maxima didirikan untuk menghadirkan inovasi digital di sektor pertambangan. Dengan fokus pada otomatisasi dan monitoring real-time, kami berkomitmen dalam transformasi digital industri tambang.",
+    "prompts": ["Apa proyek pertama perusahaan?", "Apa inovasi terbaru dari perusahaan?"]
   },
-  "creator": {
-    "reply": "Pembuatku adalah ferry ganteng",
-    "prompts": ["Hai", "Apa yang bisa kamu lakukan?", "Siapa kamu?"]
-  }
+  "produk": {
+    "reply": "Kami menawarkan berbagai produk inovatif di bidang teknologi pertambangan: MhaulProx (Hauling Management System), Mlenz (Kamera Analitik AI), Mineguard (Smart Watch untuk pekerja tambang), MWim (Weigh in Motion), dan MVAEBS (Sistem pengereman otomatis berbasis radar).",
+    "prompts": ["Jelaskan tentang MhaulProx", "Apa itu Mlenz?", "Bagaimana cara mendapatkan produk ini?"]
+  },
+  "produk_mhaulprox": {
+    "reply": "MhaulProx adalah platform Hauling Management System (HMS) berbasis AI & Machine Learning yang membantu mengoptimalkan rute pengangkutan, meningkatkan produktivitas, dan mencegah kecelakaan tambang dengan teknologi keselamatan canggih.",
+    "prompts": ["Apa keunggulan produk ini?", "Bagaimana cara mendapatkan produk ini?"]
+  },
+  "produk_mlenz": {
+    "reply": "Mlenz adalah kamera analitik berbasis kecerdasan buatan (AI) yang memberikan analisis real-time untuk mengoptimalkan keselamatan dan produktivitas di industri pertambangan.",
+    "prompts": ["Apa manfaat Mlenz?", "Bagaimana cara kerja Mlenz?"]
+  },
+  "produk_mineguard": {
+    "reply": "Mineguard adalah Smart Watch/Smart Band inovatif untuk mendukung keselamatan dan kesehatan pekerja tambang. Dilengkapi dengan fitur pemantauan detak jantung, stres, analisis fit-to-work, dan pelacak aktivitas.",
+    "prompts": ["Bagaimana cara kerja Mineguard?", "Apa manfaatnya bagi pekerja tambang?"]
+  },
+  "produk_mwim": {
+    "reply": "MWim (Weigh in Motion) adalah teknologi yang digunakan untuk mengukur berat kendaraan saat sedang berjalan, memungkinkan pemantauan beban kendaraan tanpa harus berhenti.",
+    "prompts": ["Bagaimana cara kerja MWim?", "Apa keunggulan MWim dibanding sistem timbang lainnya?"]
+  },
+  "produk_mvaebs": {
+    "reply": "MVAEBS adalah sistem pengereman otomatis berbasis radar yang mendeteksi objek di depan truk. Jika pengemudi tidak merespons, sistem ini akan memberikan peringatan dan otomatis mengaktifkan rem untuk mencegah kecelakaan.",
+    "prompts": ["Bagaimana cara kerja MVAEBS?", "Apa keunggulan sistem ini dibanding kompetitor?"]
+  },
+  "keunggulan": {
+    "reply": "Produk kami memiliki beberapa keunggulan dibanding kompetitor: 1) Teknologi berbasis AI & Machine Learning, 2) Integrasi sistem yang lebih canggih, 3) Efisiensi operasional tinggi, 4) Sistem keamanan lebih baik, 5) Dukungan layanan pelanggan yang optimal.",
+    "prompts": ["Bagaimana cara kerja teknologi AI pada produk ini?", "Apa manfaat utama dari solusi ini?"]
+  },
+  "cara_kerja_mhaulprox": {
+    "reply": "MhaulProX adalah sistem manajemen pengangkutan yang menggunakan AI dan IoT untuk mengoptimalkan rute hauling di area tambang. Sistem ini menganalisis data lalu lintas, kondisi jalan, serta performa kendaraan untuk meningkatkan efisiensi dan mengurangi konsumsi bahan bakar. Dengan pemantauan real-time, MhaulProX membantu perusahaan dalam mengelola operasi hauling dengan lebih aman dan produktif.",
+    "prompts": ["Bagaimana cara kerja MhaulProX?", "Apa manfaat MhaulProX?"]
+  },
+  "cara_kerja_mlenz": {
+    "reply": "Mlenz adalah sistem kamera analitik berbasis AI yang digunakan untuk meningkatkan keselamatan dan efisiensi operasional di tambang. Kamera ini dapat mendeteksi kelelahan pengemudi, penggunaan APD, serta potensi bahaya di lingkungan kerja. Dengan teknologi deteksi real-time, Mlenz membantu mengurangi risiko kecelakaan kerja dan meningkatkan kepatuhan terhadap standar keselamatan.",
+    "prompts": ["Bagaimana cara kerja Mlenz?", "Apa keunggulan Mlenz?"]
+  },
+  "cara_kerja_mineguard": {
+    "reply": "Mineguard adalah perangkat wearable pintar yang dirancang untuk memantau kesehatan pekerja tambang. Smartwatch ini dapat mengukur detak jantung, tingkat stres, kualitas tidur, serta kondisi fit-to-work pekerja sebelum mereka memulai tugas. Dengan fitur pemantauan real-time, Mineguard membantu perusahaan memastikan pekerja dalam kondisi optimal dan mengurangi risiko kecelakaan akibat kelelahan atau kondisi kesehatan yang buruk.",
+    "prompts": ["Bagaimana cara kerja Mineguard?", "Apa fungsi utama Mineguard?"]
+  },
+  "cara_kerja_mwim": {
+    "reply": "MWim adalah sistem Weigh-in-Motion yang memungkinkan pengukuran berat kendaraan secara otomatis tanpa harus berhenti. Teknologi ini menggunakan sensor pada jalur hauling untuk mengukur bobot kendaraan yang melintas secara real-time. Dengan sistem ini, perusahaan dapat mengontrol muatan kendaraan lebih efisien dan menghindari overloading yang dapat merusak jalan tambang.",
+    "prompts": ["Bagaimana cara kerja MWim?", "Apa manfaat MWim dalam operasional tambang?"]
+  },
+  "cara_kerja_mvaebs": {
+    "reply": "MVAEBS (Mine Vehicle Advanced Emergency Braking System) adalah sistem pengereman otomatis berbasis radar yang dirancang untuk kendaraan tambang. Jika sistem mendeteksi adanya objek di depan kendaraan, MVAEBS akan memberikan peringatan kepada pengemudi. Jika pengemudi tidak merespons, sistem akan secara otomatis mengaktifkan pengereman darurat untuk mencegah tabrakan.",
+    "prompts": ["Bagaimana cara kerja MVAEBS?", "Apa keuntungan menggunakan MVAEBS?"]
+  },
+  "keunggulan_mhaulprox": {
+    "reply": "MhaulProX unggul dibanding produk lain karena kemampuannya dalam mengintegrasikan AI dan IoT untuk optimasi rute hauling. Sistem ini mampu mengurangi konsumsi bahan bakar, meningkatkan produktivitas, serta mencegah kecelakaan dengan analisis lalu lintas berbasis data real-time.",
+    "prompts": ["Apa keunggulan MhaulProX dibanding kompetitor?", "Mengapa MhaulProX lebih efisien?"]
+  },
+  "keunggulan_mlenz": {
+    "reply": "Mlenz lebih unggul dibanding produk lain karena kemampuannya mendeteksi kelelahan pengemudi, pelanggaran APD, dan potensi bahaya dalam lingkungan tambang secara real-time. Teknologi AI yang digunakan mampu memberikan peringatan dini untuk mencegah kecelakaan.",
+    "prompts": ["Apa yang membedakan Mlenz dari kamera lainnya?", "Bagaimana Mlenz membantu dalam keselamatan kerja?"]
+  },
+  "keunggulan_mineguard": {
+    "reply": "Mineguard menawarkan fitur pemantauan kesehatan pekerja secara langsung melalui wearable device. Dengan data kesehatan real-time, perusahaan dapat memastikan bahwa hanya pekerja yang dalam kondisi fit-to-work yang ditugaskan untuk bekerja, sehingga meningkatkan keselamatan kerja.",
+    "prompts": ["Apa fitur unggulan Mineguard?", "Mengapa Mineguard penting bagi pekerja tambang?"]
+  },
+  "keunggulan_mwim": {
+    "reply": "MWim lebih unggul dibanding sistem timbang konvensional karena dapat mengukur berat kendaraan secara otomatis tanpa harus berhenti. Hal ini mengurangi antrean kendaraan di tambang dan meningkatkan efisiensi pengangkutan.",
+    "prompts": ["Apa kelebihan MWim dibanding timbang statis?", "Bagaimana MWim mengoptimalkan operasional tambang?"]
+  },
+  "keunggulan_mvaebs": {
+    "reply": "MVAEBS unggul karena sistem radar canggihnya mampu mendeteksi objek di jalur kendaraan dan secara otomatis mengaktifkan pengereman darurat jika diperlukan. Hal ini dapat mencegah kecelakaan fatal di area tambang dengan lalu lintas yang padat.",
+    "prompts": ["Bagaimana MVAEBS mencegah kecelakaan?", "Apa fitur utama MVAEBS?"]
+  },
+  "cara_mendapatkan": {
+    "reply": "Anda dapat menghubungi tim sales kami melalui website resmi atau email untuk mendapatkan informasi lebih lanjut dan melakukan pemesanan.",
+    "prompts": ["Apakah tersedia demo produk?", "Apakah ada layanan purna jual?"]
+  },
+    "kontak_alamat": {
+      "reply": "📍 Alamat kantor kami: Komplek Ruko Pelangi, Jl. Syarifuddin Yoes Blk. A No.29 B Point, Sepinggan, Kecamatan Balikpapan Selatan, Kota Balikpapan, Kalimantan Timur 76114.",
+      "prompts": ["Apa nomor telepon perusahaan?", "Bagaimana cara menghubungi melalui email?"]
+    },
+    "kontak_telepon": {
+      "reply": "📞 Nomor telepon kami: 0811-5495-565. Anda bisa menghubungi kami selama jam operasional.",
+      "prompts": ["Apa alamat kantor?", "Apa email perusahaan?"]
+    },
+    "kontak_email": {
+      "reply": "Email kami: info@minergosystems.com. Jangan ragu untuk menghubungi kami melalui email.",
+      "prompts": ["Apa nomor telepon perusahaan?", "Dimana lokasi kantor perusahaan?"]
+    }
 }

@@ -1,18 +1,18 @@
-# Natural Chatbot API
+## 🚀 Chatbot PT Minergo Visi Maxima
 
-Chatbot sederhana berbasis **Node.js** dan **Natural.js** yang mampu memahami teks dan merespons sesuai kategori yang telah dilatih menggunakan dataset JSON.
-
-## 🚀 Fitur
+🚀 Fitur
 
 - Klasifikasi teks dengan **Naive Bayes Classifier**
 - Data training dan respons chatbot disimpan dalam file JSON
 - API sederhana berbasis **Express.js**
 
-## 🛠️ Teknologi
+## 📌 Fitur Utama
 
-- **Node.js** – JavaScript runtime > v18
-- **Express.js** – Web framework
-- **Natural.js** – Natural language processing toolkit
+✅ Multi-turn Conversation - Bisa menangani percakapan berlanjut berdasarkan konteks.
+✅ Auto-Learning - Chatbot otomatis belajar dari pertanyaan baru yang ditambahkan tanpa restart server.
+✅ Database MySQL - Semua data disimpan di database, termasuk training data dan pertanyaan tidak dikenali.
+✅ Penyimpanan Pertanyaan Tidak Dikenali - Admin dapat melihat pertanyaan yang tidak dikenali untuk memperbaiki chatbot.
+✅ Dukungan Multi-Bahasa (ID & EN) - Dapat mendeteksi bahasa pengguna dan merespons dengan bahasa yang sesuai.
 
 ## 📌 Instalasi
 
@@ -29,26 +29,30 @@ pnpm install
 
 ## 🔧 Konfigurasi
 
-Tambahkan file berikut:
+1. **Buat file .env** di root proyek dan isi dengan konfigurasi database:
+   DB_HOST=localhost
+   DB_USER=root
+   DB_PASSWORD=
+   DB_NAME=chatbot_db
 
-1. **trainingData.json** – Data training untuk klasifikasi teks.
+2. **Setup Database MySQL** – Buka MySQL dan jalankan perintah berikut:
+   CREATE DATABASE chatbot_db;
+   USE chatbot_db;
 
-```json
-[
-  { "text": "halo", "category": "sapaan" },
-  { "text": "siapa kamu?", "category": "identitas" }
-]
-```
+   -- Tabel untuk menyimpan data training
+   CREATE TABLE training_data (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   text VARCHAR(255) NOT NULL,
+   category VARCHAR(100) NOT NULL
+   );
 
-2. **responses.json** – Balasan chatbot berdasarkan kategori.
+   -- Tabel untuk menyimpan pertanyaan yang tidak dikenali
+   CREATE TABLE unknown_queries (
+   id INT AUTO_INCREMENT PRIMARY KEY,
+   message TEXT NOT NULL,
+   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 
-```json
-{
-  "sapaan": { "reply": "Halo! Apa kabar?" },
-  "identitas": { "reply": "Saya adalah chatbot berbasis Natural.js!" },
-  "default": { "reply": "Maaf, saya tidak mengerti." }
-}
-```
+);
 
 ## 🚀 Menjalankan API
 
@@ -64,30 +68,83 @@ API akan berjalan di `http://localhost:3000`
 
 ## 📡 Endpoint API
 
-### 1. Kirim Pesan ke Chatbot
+1. **Chatbot Query** - Endpoint: POST /chat\*\*
 
-**Endpoint:** `POST /chat`
-
-**Request:**
+**Request**
 
 ```json
 {
-  "message": "halo"
+  {
+    "message": "Apa visi dan misi perusahaan?"
+  }
 }
 ```
 
-**Response:**
+**Responses**
 
 ```json
 {
-  "reply": "Halo! Apa kabar?"
+  "response": {
+    "reply": "Visi kami adalah menjadi pemimpin dalam inovasi teknologi pertambangan berkelanjutan...",
+    "prompts": [
+      "Bagaimana cara kerja solusi AI?",
+      "Apa manfaat teknologi pertambangan?"
+    ]
+  }
 }
 ```
 
-## 🤝 Kontribusi
+2. **Menambahkan Data Training** -POST /admin/add-training-data
+   **Request**
 
-Pull request sangat diterima! Silakan fork dan kembangkan fitur baru.
+**Request**
 
-## 📜 Lisensi
+```json
+{
+  {
+    "text": "Bagaimana cara kerja MhaulProx?",
+    "category": "cara_kerja_mhaulprox"
+  }
+}
+```
 
-Proyek ini menggunakan lisensi **MIT**.
+**Responses**
+
+```json
+{
+  {
+    "message": "Pertanyaan berhasil ditambahkan dan chatbot telah dilatih ulang!"
+  }
+}
+```
+
+3. **Melihat Pertanyaan Tidak Dikenali** - Endpoint: GET /admin/unknown-queries
+
+   **Responses**
+
+```json
+{
+  {
+    "message": "Log pertanyaan tidak dikenali telah dihapus."
+  }
+}
+```
+
+## 🛠 Teknologi yang Digunakan
+
+Node.js (Backend)
+
+Express.js (API)
+
+Natural.js (NLP)
+
+MySQL (Database)
+
+dotenv (Environment Variables)
+
+## 📌 To-Do List (Pengembangan Selanjutnya)
+
+✅ Integrasi dengan Telegram Bot
+✅ Dashboard Admin untuk Mengelola Data Training
+✅ Fitur Logging & Analytics
+✅ Integrasi dengan WhatsApp API (Jika Dibutuhkan)

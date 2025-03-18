@@ -1,9 +1,166 @@
 [
-  { "text": "halo", "category": "sapaan" },
-  { "text": "hai", "category": "sapaan" },
-  { "text": "selamat pagi", "category": "sapaan" },
-  { "text": "siapa kamu?", "category": "bot" },
-  { "text": "apa yang bisa kamu lakukan?", "category": "fitur" },
-  { "text": "berapa harga laptop?", "category": "harga" },
-  { "text": "siapa pembuat kamu?", "category": "creator" }
+  {
+    "text": "Hai",
+    "category": "sapaan"
+  },
+  {
+    "text": "Halo",
+    "category": "sapaan"
+  },
+  {
+    "text": "Apa nama perusahaan ini?",
+    "category": "profil"
+  },
+  {
+    "text": "Bidang industri perusahaan?",
+    "category": "profil"
+  },
+  {
+    "text": "Apa saja bidang yang perusahaan ini jalankan?",
+    "category": "profil"
+  },
+  {
+    "text": "Apa fokus utama perusahaan ini?",
+    "category": "profil"
+  },
+  {
+    "text": "Apa visi dan misi perusahaan?",
+    "category": "visi_misi"
+  },
+  {
+    "text": "Jelaskan visi dan misi perusahaan ini.",
+    "category": "visi_misi"
+  },
+  {
+    "text": "Apa tujuan utama perusahaan?",
+    "category": "visi_misi"
+  },
+  {
+    "text": "Bagaimana perusahaan ini melihat masa depan industri?",
+    "category": "visi_misi"
+  },
+  {
+    "text": "Bagaimana sejarah perusahaan ini?",
+    "category": "sejarah"
+  },
+  {
+    "text": "Kapan perusahaan ini didirikan?",
+    "category": "sejarah"
+  },
+  {
+    "text": "Apa latar belakang perusahaan ini?",
+    "category": "sejarah"
+  },
+  {
+    "text": "Bagaimana awal mula perusahaan ini?",
+    "category": "sejarah"
+  },
+  {
+    "text": "Apa saja produk yang ditawarkan?",
+    "category": "produk"
+  },
+  {
+    "text": "Produk apa yang tersedia di Minergo Visi Maxima?",
+    "category": "produk"
+  },
+  {
+    "text": "Bagaimana cara kerja MhaulProX?",
+    "category": "cara_kerja_mhaulprox"
+  },
+  {
+    "text": "Apa itu MhaulProX?",
+    "category": "produk_mhaulprox"
+  },
+  {
+    "text": "Bagaimana cara kerja Mlenz?",
+    "category": "cara_kerja_mlenz"
+  },
+  {
+    "text": "Apa itu Mlenz?",
+    "category": "produk_mlenz"
+  },
+  {
+    "text": "Bagaimana cara kerja Mineguard?",
+    "category": "cara_kerja_mineguard"
+  },
+  {
+    "text": "Apa itu Mineguard?",
+    "category": "produk_mineguard"
+  },
+  {
+    "text": "Bagaimana cara kerja MWim?",
+    "category": "cara_kerja_mwim"
+  },
+  {
+    "text": "Apa itu MWim?",
+    "category": "produk_mwim"
+  },
+  {
+    "text": "Bagaimana cara kerja MVAEBS?",
+    "category": "cara_kerja_mvaebs"
+  },
+  {
+    "text": "Apa itu MVAEBS?",
+    "category": "produk_mvaebs"
+  },
+  {
+    "text": "Apa keunggulan MhaulProX dibanding kompetitor?",
+    "category": "keunggulan_mhaulprox"
+  },
+  {
+    "text": "Apa yang membedakan Mlenz dari kamera lainnya?",
+    "category": "keunggulan_mlenz"
+  },
+  {
+    "text": "Apa keunggulan Mineguard dibanding perangkat lain?",
+    "category": "keunggulan_mineguard"
+  },
+  {
+    "text": "Apa kelebihan MWim dibanding timbang statis?",
+    "category": "keunggulan_mwim"
+  },
+  {
+    "text": "Bagaimana MVAEBS mencegah kecelakaan?",
+    "category": "keunggulan_mvaebs"
+  },
+  {
+    "text": "Bagaimana cara mendapatkan produk ini?",
+    "category": "cara_mendapatkan"
+  },
+  {
+    "text": "Dimana saya bisa membeli produk ini?",
+    "category": "cara_mendapatkan"
+  },
+  {
+    "text": "Dimana lokasi kantor perusahaan?",
+    "category": "kontak_alamat"
+  },
+  {
+    "text": "Apa alamat kantor?",
+    "category": "kontak_alamat"
+  },
+  {
+    "text": "Berapa nomor telepon perusahaan?",
+    "category": "kontak_telepon"
+  },
+  {
+    "text": "Bagaimana cara menghubungi melalui telepon?",
+    "category": "kontak_telepon"
+  },
+  {
+    "text": "Apa email perusahaan?",
+    "category": "kontak_email"
+  },
+  {
+    "text": "Bagaimana cara menghubungi melalui email?",
+    "category": "kontak_email"
+  },
+  {
+    "text": "Kegunaan MLenz",
+    "category": "produk_mlenz"
+  },
+  {
+    "text": "Bagaimana cara kerja sistem ini?",
+    "category": "cara_kerja"
+  }
 ]
