@@ -6,7 +6,7 @@ services:
     build: .
     network_mode: "host" # Pastikan Docker bisa akses jaringan host langsung
     environment:
-      DATABASE_HOST: 127.0.0.1
+      DATABASE_HOST: localhost
       DATABASE_USER: adminpanel_chatbot
       DATABASE_PASSWORD: 4FDICxDkeuuT
       DATABASE_NAME: adminpanel_chatbot
