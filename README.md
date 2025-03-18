@@ -8,11 +8,11 @@
 
 ## 📌 Fitur Utama
 
-✅ Multi-turn Conversation - Bisa menangani percakapan berlanjut berdasarkan konteks.
-✅ Auto-Learning - Chatbot otomatis belajar dari pertanyaan baru yang ditambahkan tanpa restart server.
-✅ Database MySQL - Semua data disimpan di database, termasuk training data dan pertanyaan tidak dikenali.
-✅ Penyimpanan Pertanyaan Tidak Dikenali - Admin dapat melihat pertanyaan yang tidak dikenali untuk memperbaiki chatbot.
-✅ Dukungan Multi-Bahasa (ID & EN) - Dapat mendeteksi bahasa pengguna dan merespons dengan bahasa yang sesuai.
+- Multi-turn Conversation - Bisa menangani percakapan berlanjut berdasarkan konteks.
+- Auto-Learning - Chatbot otomatis belajar dari pertanyaan baru yang ditambahkan tanpa restart server.
+- Database MySQL - Semua data disimpan di database, termasuk training data dan pertanyaan tidak dikenali.
+- Penyimpanan Pertanyaan Tidak Dikenali - Admin dapat melihat pertanyaan yang tidak dikenali untuk memperbaiki chatbot.
+- Dukungan Multi-Bahasa (ID & EN) - Dapat mendeteksi bahasa pengguna dan merespons dengan bahasa yang sesuai.
 
 ## 📌 Instalasi
 
@@ -30,29 +30,40 @@ pnpm install
 ## 🔧 Konfigurasi
 
 1. **Buat file .env** di root proyek dan isi dengan konfigurasi database:
-   DB_HOST=localhost
-   DB_USER=root
-   DB_PASSWORD=
-   DB_NAME=chatbot_db
+
+# Connect Database
+
+```sh
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=
+DB_NAME=chatbot_db
+```
 
 2. **Setup Database MySQL** – Buka MySQL dan jalankan perintah berikut:
-   CREATE DATABASE chatbot_db;
-   USE chatbot_db;
 
-   -- Tabel untuk menyimpan data training
-   CREATE TABLE training_data (
-   id INT AUTO_INCREMENT PRIMARY KEY,
-   text VARCHAR(255) NOT NULL,
-   category VARCHAR(100) NOT NULL
-   );
+# Setup Database
 
-   -- Tabel untuk menyimpan pertanyaan yang tidak dikenali
-   CREATE TABLE unknown_queries (
-   id INT AUTO_INCREMENT PRIMARY KEY,
-   message TEXT NOT NULL,
-   timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+```sh
+CREATE DATABASE chatbot_db;
+USE chatbot_db;
+
+-- Tabel untuk menyimpan data training
+CREATE TABLE training_data (
+id INT AUTO_INCREMENT PRIMARY KEY,
+text VARCHAR(255) NOT NULL,
+category VARCHAR(100) NOT NULL
+);
+
+
+-- Tabel untuk menyimpan pertanyaan yang tidak dikenali
+CREATE TABLE unknown_queries (
+id INT AUTO_INCREMENT PRIMARY KEY,
+message TEXT NOT NULL,
+timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
 
 );
+```
 
 ## 🚀 Menjalankan API
 
