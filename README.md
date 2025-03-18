@@ -155,7 +155,7 @@ dotenv (Environment Variables)
 
 ## 📌 To-Do List (Pengembangan Selanjutnya)
 
-✅ Integrasi dengan Telegram Bot
-✅ Dashboard Admin untuk Mengelola Data Training
-✅ Fitur Logging & Analytics
-✅ Integrasi dengan WhatsApp API (Jika Dibutuhkan)
+- Integrasi dengan Telegram Bot
+- Dashboard Admin untuk Mengelola Data Training
+- Fitur Logging & Analytics
+- Integrasi dengan WhatsApp API (Jika Dibutuhkan)
