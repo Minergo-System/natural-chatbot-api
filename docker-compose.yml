@@ -8,7 +8,7 @@ services:
     environment:
       DATABASE_HOST: 127.0.0.1
       DATABASE_USER: adminpanel_chatbot
-      DATABASE_PASSWORD: Minergo@2024!
+      DATABASE_PASSWORD: 4FDICxDkeuuT
       DATABASE_NAME: adminpanel_chatbot
     ports:
       - "3030:3030"
