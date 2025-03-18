@@ -133,4 +133,4 @@ app.delete("/admin/clear-unknown-queries", (req, res) => {
   });
 });
 
-app.listen(3000, () => console.log("Chatbot berjalan di http://localhost:3000"));
+app.listen(3030, () => console.log("Chatbot berjalan di http://localhost:3030"));
