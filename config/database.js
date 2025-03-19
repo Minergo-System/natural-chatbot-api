@@ -1,3 +1,4 @@
+require("dotenv").config();
 const mysql = require("mysql2");
 const natural = require("natural");
 
@@ -8,9 +9,10 @@ const db = mysql.createConnection({
   database: process.env.DB_NAME,
 });
 
-let responses = [];
-let trainingData = [];
-const classifier = new natural.BayesClassifier();
+// Buat variable global
+global.responses = [];
+global.trainingData = [];
+global.classifier = new natural.BayesClassifier();
 
 const loadCache = () => {
   db.query("SELECT * FROM responses", (err, result) => {
@@ -18,9 +20,17 @@ const loadCache = () => {
       console.error("Error fetching responses: ", err);
       return;
     }
-    responses = result.map((item) => ({
+    
+    global.responses = result.map((item) => ({
       ...item,
-      prompts: JSON.parse(item.prompts),
+      prompts: (() => {
+        try {
+          return JSON.parse(item.prompts);
+        } catch (e) {
+          console.error("Error parsing prompts: ", e);
+          return [];
+        }
+      })(),
     }));
   });
 
@@ -29,24 +39,37 @@ const loadCache = () => {
       console.error("Error fetching training data: ", err);
       return;
     }
-    trainingData = result;
+
+    global.trainingData = result;
+    global.classifier = new natural.BayesClassifier(); // Reset classifier sebelum melatih ulang
+
     trainingData.forEach((item) => {
-      classifier.addDocument(item.text, item.category);
+      global.classifier.addDocument(item.text, item.category);
     });
-    classifier.train();
+
+    global.classifier.train();
     console.log("Classifier trained successfully.");
   });
 };
 
 const logToDatabase = (message, response) => {
-  const timestamp = new Date().toISOString();
-  db.query("INSERT INTO logs (message, response, timestamp) VALUES (?, ?, ?)", [message, response, timestamp], (err) => {
-    if (err) {
-      console.error("Error logging to database: ", err);
+  const timestamp = new Date(Date.now() + 8 * 60 * 60 * 1000) // Tambah 8 jam
+    .toISOString()
+    .slice(0, 19)
+    .replace("T", " "); // Format YYYY-MM-DD HH:MM:SS
+
+  db.query(
+    "INSERT INTO logs (message, response, timestamp) VALUES (?, ?, ?)",
+    [message, response, timestamp],
+    (err) => {
+      if (err) {
+        console.error("Error logging to database: ", err);
+      }
     }
-  });
+  );
 };
 
-setInterval(loadCache, 360000);
+// Perbarui cache setiap 1 jam
+setInterval(loadCache, 3600000);
 
-module.exports = { db, loadCache, responses, trainingData, classifier, logToDatabase };
+module.exports = { db, loadCache, logToDatabase };
