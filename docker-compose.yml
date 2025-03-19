@@ -1,0 +1,19 @@
+networks:
+  my_bridge_network:
+    driver: bridge
+
+services:
+  app:
+    container_name: express-mia
+    build: .
+    environment:
+      DB_HOST: "194.59.165.189"
+      DB_PORT: "3306"
+      DB_USER: "adminpanel_chatbot"
+      DB_PASSWORD: "4FDICxDkeuuT"
+      DB_NAME: "adminpanel_chatbot"
+    ports:
+      - "3030:3030"
+    restart: always
+    networks:
+      - my_bridge_network

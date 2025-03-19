@@ -1,9 +1,0 @@
-[
-  { "text": "halo", "category": "sapaan" },
-  { "text": "hai", "category": "sapaan" },
-  { "text": "selamat pagi", "category": "sapaan" },
-  { "text": "siapa kamu?", "category": "bot" },
-  { "text": "apa yang bisa kamu lakukan?", "category": "fitur" },
-  { "text": "berapa harga laptop?", "category": "harga" },
-  { "text": "siapa pembuat kamu?", "category": "creator" }
-]

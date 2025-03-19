@@ -1,31 +1,92 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const mysql = require("mysql2");
 const natural = require("natural");
-const fs = require("fs");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-const responses = JSON.parse(fs.readFileSync("responses.json", "utf8"));
+const db = mysql.createConnection({
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASSWORD,
+  database: process.env.DB_NAME
+});
 
-const trainingData = JSON.parse(fs.readFileSync("trainingData.json", "utf8"));
 
+db.connect(err => {
+  if (err) {
+    console.error("Database connection failed: " + err.stack);
+    return;
+  }
+  console.log("Connected to database.");
+});
+
+let responses = [];
+let trainingData = [];
 const classifier = new natural.BayesClassifier();
+
+const loadCache = () => {
+  db.query("SELECT * FROM responses", (err, result) => {
+    if (err) {
+      console.error("Error fetching responses: ", err);
+      return;
+    }
+    responses = result.map(item => ({
+      ...item,
+      prompts: JSON.parse(item.prompts)
+    }));
+  });
+
+  db.query("SELECT * FROM training_data", (err, result) => {
+    if (err) {
+      console.error("Error fetching training data: ", err);
+      return;
+    }
+    trainingData = result;
+    
+    // Train classifier after data is loaded
+    // classifier.clear();
+    trainingData.forEach((item) => {
+      classifier.addDocument(item.text, item.category);
+    });
+    classifier.train();
+    console.log("Classifier trained successfully.");
+  });
+};
+
+// Load cache initially
+loadCache();
+
+// Refresh cache periodically (optional)
+setInterval(loadCache, 360000); // Refresh every 60 minutes
 
 trainingData.forEach((item) => {
   classifier.addDocument(item.text, item.category);
 });
 
-classifier.train();
+app.get("/responses", (req, res) => {
+  res.json(responses);
+});
+
+app.get("/trainingData", (req, res) => {
+  res.json(trainingData);
+});
 
 app.post("/chat", (req, res) => {
   const userMessage = req.body.message.toLowerCase();
   const responseType = classifier.classify(userMessage);
-
-  const response = responses[responseType] || responses["default"];
-
+  
+  const response = responses.find(r => r.category === responseType) || { response: "Maaf, saya tidak mengerti." };
+  
   res.json(response);
 });
 
-app.listen(3000, () => console.log("Chatbot berjalan di http://localhost:3000"));
+const PORT = process.env.PORT || 3030;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
+
+
