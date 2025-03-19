@@ -38,6 +38,15 @@ const loadCache = () => {
   });
 };
 
+const logToDatabase = (message, response) => {
+  const timestamp = new Date().toISOString();
+  db.query("INSERT INTO logs (message, response, timestamp) VALUES (?, ?, ?)", [message, response, timestamp], (err) => {
+    if (err) {
+      console.error("Error logging to database: ", err);
+    }
+  });
+};
+
 setInterval(loadCache, 360000);
 
-module.exports = { db, loadCache, responses, trainingData, classifier };
+module.exports = { db, loadCache, responses, trainingData, classifier, logToDatabase };
