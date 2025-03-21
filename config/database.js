@@ -70,6 +70,6 @@ const logToDatabase = (message, response) => {
 };
 
 // Perbarui cache setiap 1 jam
-setInterval(loadCache, 3600000);
+setInterval(loadCache, 60000);
 
 module.exports = { db, loadCache, logToDatabase };
